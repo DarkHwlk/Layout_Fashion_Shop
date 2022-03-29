@@ -1,0 +1,316 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.15;
+}
+#wrapper{
+    margin: 0 auto;  /*Can giua*/
+    transition: 0.5s;
+}
+/*Header*/
+#header{
+    background-color: #131921;
+    width: 100%;
+    z-index: 100;
+}
+#small-menu{
+    background-color: #353b48;
+    display: none;
+    position: relative;
+}
+#toggle-menu{
+    background-color: #353b48;
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;  /*day 2 phan sang 2 ben*/
+    justify-items: center;
+    position: relative;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.container{
+    max-width: 1170px;
+    margin: 0px auto;
+}
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#main-menu li a{
+    font-size: 15px;
+    color: #f8f8f8;
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;  
+}
+#main-menu>li>a{
+    position: relative;
+}
+#main-menu>li>a::before{
+    content: '';
+    height: 4px;
+    width: 0px;
+    background-color: #f00;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    display: none;
+    transition: 0.5s;
+}
+#main-menu>li:hover>a::before{
+    display: block;
+    width: 100%;
+}
+.choose-this{
+    background-color: #f00;
+}
+.sub-menu{
+    width: 1070px;
+    height: fit-content;
+    position: absolute;
+    background-color: #E8E8E8;
+    top: 48px;
+    padding: 20px 50px;
+    display: none;
+    justify-content: space-between;
+    transition: 0.5s ease-in-out;
+}
+.open-sub-menu{
+    display: flex;
+}
+.close-sub-menu{
+    display: none;
+}
+.parrent{
+    width: 200px;
+    height: fit-content;
+}
+.parrent h3{
+    color: #111;
+    font-size: 17px;
+    font-weight: 600;
+}
+.parrent a{
+    display: block;
+    text-decoration: none;
+    color: #333f48;
+    padding-top: 15px;
+    font-size: 16px;
+}
+#logo img{
+    width: 130px;
+    display: block;  /*Lam mat khung cua anh*/
+}
+.container input{
+    padding-top: 5px;
+}
+.sb-sbm{  /* class sb-sbm trong search-box */
+    height: auto;
+    width: 30px;
+    color: transparent;  /* trong suot */
+    background: transparent url(../pictures/search_icon.png) 
+    no-repeat center; /* trong suot */
+    background-size: contain; /*anh nam dung trong box*/
+    border: none;
+}
+.icon-header{
+    font-size: 25px;
+    color: #f8f8f8;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+/*Content*/
+#wrapper-content{
+    max-width: 1170px;
+    margin: 0 auto;  /*Can giua*/
+    margin-top: 48px;
+}
+#product-info-main{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    padding: 50px 0px;
+}
+#product-image-box{
+    left: 0px;
+    width: fit-content;
+    height: fit-content;  
+    display: flex;
+}
+#product-image-box .product-image-list{
+    left: 0px;
+    width: 150px;
+    height: fit-content;
+    /* background-color: red;  */
+    padding: 20px 0px;
+}
+#product-image-box .product-image-list img{
+    padding-bottom: 20px;
+    width: 100px;
+}
+#product-image-box .product-image-list img:last-child{
+    padding-bottom: 0px;
+}
+#product-image-box .product-image-main img{
+    width: 550px;
+}
+#product-feature{
+    width: 100%;
+    height: fit-content;
+    margin-left: 50px;
+    color: #2d3436;
+}
+#product-feature .product-price-code{
+    margin-bottom: 20px;
+}
+#product-feature .product-name{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#product-feature .detail-code{
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+#product-feature .price-info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+#product-feature .price-info span{
+    text-decoration: line-through;
+    margin-right: 15px;
+}
+#product-feature .price-info span:last-child{
+    color: #d63031;
+    text-decoration: none;
+}
+#product-feature .label-sale{
+    font-size: 13px;
+    color: #d63031;
+}
+#product-option-box{
+    margin: 20px 0px;
+}
+#product-option-box .option-color{
+    margin-bottom: 20px;
+}
+#product-option-box .option-color p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#product-option-box .option-color .product-color-list{
+    display: flex;
+}
+#product-option-box .option-color .product-color-list .product-color-1{
+    background-color: black;
+    width: 26px;
+    height: 26px;
+    margin-right: 15px;
+    border: 2px solid red;
+}
+#product-option-box .option-color .product-color-list .product-color-2{
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    margin-right: 15px;
+    border: 2px solid red;
+}
+#product-option-box .option-size p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#product-option-box .option-size .product-size-list{
+    display: flex;
+}
+#product-option-box .option-size .product-size-list .product-size{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 26px;
+    height: fit-content;
+    border: 2px solid;
+    margin-right: 10px;
+}
+
+#footer{
+    height: 200px;
+}
+
+@media screen and (max-width: 768px){
+    /*Responsive tren nhung thiet bi co width be hon 768px*/
+    #small-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  /* day 2 phan tu sang 2 ben */
+    }
+    #toggle-menu{
+        display: block;
+        z-index: 2;
+    }
+    #logo-small{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    #logo-small img{
+        width: 124px;
+        /* display: block + margin: 0 auto => can giua */
+        display: block;
+        margin: 0 auto;
+    }
+    #login-icon{
+        z-index: 2;
+    }
+    #login-icon i{
+        display: block;
+        right: 15px;
+        padding-top: 0px;
+        padding-right: 10px;
+    }
+    #main-menu{
+        flex-direction: column;  /*Chuyen menu tu ngang -> doc*/
+    }
+    #header nav{
+        display: none;
+    }
+    #main-menu li a{
+        width: fit-content;
+    }
+    .hide-small{
+        display: none;
+    }
+    .sub-menu{
+        flex-direction: column;  /*Chuyen menu tu ngang -> doc*/
+        margin-left: 101px;
+        height: 241px;
+        top: 0px;
+    }
+    .parrent a{
+        display: none;
+    }
+
+    ul.products li{
+        flex-basis: 50%;
+    }
+}
